@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ArtistBrowser" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dip"
+        android:background="#fff"
+        android:baselineAligned="false" >
+        
+        <LinearLayout
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:layout_weight="0.7"
+	        android:padding="10dip">
+        
+	          <TextView
+	              android:id="@+id/album_title"
+	              android:layout_width="match_parent"
+	              android:layout_height="wrap_content"
+	              android:textColor="#111"
+	              android:textSize="26sp"
+	              android:textStyle="bold" />
+	        
+	        <TextView
+	            android:id="@+id/album_artist"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textColor="#666"
+	            android:textSize="20sp" />
+        </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="40dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical" >
+
+       <!--   <Button
+            android:id="@+id/play_album"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/play"
+             />-->
+        <Button
+            android:id="@+id/queue_album"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/queue" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/songs_list"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="#fff" >
+
+    </ListView>
+</LinearLayout>
+    

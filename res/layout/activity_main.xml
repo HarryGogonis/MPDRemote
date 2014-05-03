@@ -1,0 +1,143 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/song_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+	        <TextView
+	            android:id="@+id/song_title"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="top"
+	            android:textSize="24sp"
+	            android:textStyle="bold"
+	            android:maxLines="1" />
+	
+	        <TextView
+	            android:id="@+id/song_artist"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textColor="#888"
+	            android:textSize="16sp"
+	            android:maxLines="1"  />
+	        
+	        <TextView
+	            android:id="@+id/song_album"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textSize="16sp"
+	            android:maxLines="1"  />
+	
+	       
+    </LinearLayout>
+    
+    <ListView
+        android:id="@+id/song_queue"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.18" >
+
+    </ListView>
+   <LinearLayout
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal"
+	                android:paddingTop="20dp"
+	                android:background="#3c74a4"
+	                 >
+
+	            <TextView
+	                android:id="@+id/time_current"
+		          	style="@style/time"
+		          	android:paddingLeft="10dp"
+		          	  />
+
+		          <SeekBar
+		             android:id="@+id/time_seekBar"
+		             style="@style/timeBar"/>
+
+		        <TextView
+		            android:id="@+id/time_total"
+		          	style="@style/time"
+		          	android:paddingRight="10dp"
+		          	 />
+	       </LinearLayout>
+    <LinearLayout
+        android:id="@+id/playerControls"
+        android:layout_width="fill_parent"
+        android:layout_height="69dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:background="#3c74a4" >
+
+       <!--  <Button
+            android:id="@+id/repeat"
+            style="@style/PlayerButton"
+            android:background="@drawable/ic_action_repeat_unselected"
+            android:onClick="repeat" /> -->
+
+        <Button
+            android:id="@+id/previous"
+            style="@style/PlayerButton_large"
+            android:background="@drawable/ic_action_previous"
+            android:onClick="previous" />
+
+        <Button
+            android:id="@+id/play_pause"
+            style="@style/PlayerButton_large"
+            android:background="@drawable/ic_action_play"
+            android:onClick="playPause" />
+
+        <Button
+            android:id="@+id/next"
+            style="@style/PlayerButton_large"
+            android:background="@drawable/ic_action_next"
+            android:onClick="next" />
+<!--  
+        <Button
+            android:id="@+id/shuffle"
+            style="@style/PlayerButton"
+            android:background="@drawable/ic_action_shuffle_unselected"
+            android:onClick="shuffle" />-->
+        
+         <Button
+            android:id="@+id/control_overflow"
+            style="@style/PlayerButton"
+            android:background="@drawable/ic_action_overflow"
+            android:onClick="controlOverflow" />
+    </LinearLayout>
+ 
+    
+    <!--<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        android:background="#ccc" >
+         
+	      <SeekBar
+	        android:id="@+id/volume_seekBar"
+	        style="@style/volumeBar" />
+	    
+	    <Button
+	        android:id="@+id/button1"
+	        style="?android:attr/buttonStyleSmall"
+	        android:layout_width="25dip"
+	        android:layout_height="25dip"
+	        android:padding="10dip"
+	        android:background="@drawable/ic_action_volume_on"
+	         /> 
+
+    </LinearLayout>-->
+
+</LinearLayout>

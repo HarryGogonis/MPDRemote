@@ -1,0 +1,95 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+        
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+        
+        
+    </style>
+    
+    <style name="PlayerTheme" parent="AppBaseTheme">
+    		<!--  <item name="android:actionBarStyle">@style/ActionBar</item>-->
+
+        
+    </style>
+    
+    <style name="ActionBar" parent="android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#3c74a4</item>
+    </style>
+    
+    
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. 
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+        <item name="android:actionBarTabTextStyle">@style/ActionBarText</item>-->
+        
+    </style>
+
+    <style name="PlayerButton">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    
+    <style name="Player_Overflow">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:layout_gravity">right</item>
+    </style>
+    
+        <style name="PlayerButton_large">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:layout_gravity">left</item>
+    </style>
+    
+    <style name="LayoutPadding">
+        <item name="android:paddingBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:paddingRight">@dimen/activity_vertical_margin</item>
+        <item name="android:paddingTop">@dimen/activity_vertical_margin</item>
+        <item name="android:paddingLeft">@dimen/activity_vertical_margin</item>
+    </style>
+    
+    <style name="time">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#fff</item>        
+    </style>
+    
+    <style name="volumeBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:max">100</item>
+        <item name="android:thumb">@drawable/ic_volume_slider_thumb</item>
+        <item name="android:progressDrawable">@drawable/timebar_progress</item>  
+        <item name="android:layout_marginBottom">10dp</item>
+        
+    </style>
+    
+    <style name="timeBar" parent="@android:style/Widget.Holo.Light.SeekBar">
+		<item name="android:layout_width">0dip</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_gravity">bottom</item>
+		<item name="android:layout_weight">0.8</item>
+		<item name="android:max">100</item>
+     </style>
+   
+    
+</resources>

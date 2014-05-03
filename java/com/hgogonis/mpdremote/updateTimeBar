@@ -1,0 +1,47 @@
+private void updateTimeBar() {
+
+	final float progress = mpdStatus.getElapsedTime();	
+	final float max = mpdStatus.getTotalTime();
+
+	final Context context = findViewById(R.id.time_seekBar).getContext();
+
+	SeekBar timeBar = (SeekBar)findViewById(R.id.time_seekBar);
+	//timeBar.setOnSeekBarChangeListener(new VolumeListener());     
+	TextView currentTime = (TextView)findViewById(R.id.time_current);
+	TextView totalTime = (TextView)findViewById(R.id.time_total);
+		
+	timeBar.setMax((int) max);
+	totalTime.setText(Song.getHumanTime(max));
+		
+	//TODO
+	// Thread should only increment the time each second until reaching max
+	// Not communicating with server
+	// Communicate only when reach end
+	new Thread(new Runnable() {
+		public void run() {
+			while (true) {
+	           		try {
+					progress++;
+					timeBar.setProgress((int) progress);  
+					currentTime.setText(Song.getHumanTime(progress));
+
+											
+					if (progress >= max) {
+						updateStatus();
+						updateCurrentSong();
+						updatePlayQueue();
+					}
+										
+
+					Thread.sleep(1000);
+
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (Exception e) {
+					Log.e("Timebar Thread", e.getMessage());
+				}
+			}
+		}  	   
+	}).start();
+}

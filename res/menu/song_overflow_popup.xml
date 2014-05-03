@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/Consume"
+        android:title="@string/consume_mode"
+    	android:checkable="true"/>
+   <item
+        android:id="@+id/Repeat"
+        android:title="@string/repeat"
+    	android:checkable="true"/> 
+    	
+    <item
+        android:id="@+id/Shuffle"
+        android:title="@string/shuffle"
+    	android:checkable="true"/> 
+    	
+   <item
+        android:id="@+id/Clear_Queue"
+        android:title="@string/queue_clear"/>
+ 
+</menu>
